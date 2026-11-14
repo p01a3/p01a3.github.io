@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="@BasseyMuse — portfolio of the founder & creator who built the Charles 'Basketball' Bassey account from 0 to 6,600+ followers in under 12 months. Video edits, graphics, live game coverage." />
+    <link rel="icon" href="data:," />
+    <title>@BasseyMuse — Social Media Producer &amp; Video Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --ink: #070a12;
+        --panel: #0d1220;
+        --panel2: #111830;
+        --line: #232c47;
+        --blue: #1d428a;
+        --blue-bright: #2f5cb8;
+        --gold: #ffc72c;
+        --paper: #f4f1e8;
+        --muted: #a7aec4;
+        --radius: 14px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--ink);
+        color: var(--paper);
+        font-family: "Barlow", system-ui, sans-serif;
+        font-size: 17px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      img, video { max-width: 100%; display: block; }
+      a { color: var(--gold); }
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+      .cond { font-family: "Barlow Condensed", "Barlow", sans-serif; }
+      .serif-it { font-family: "Newsreader", Georgia, serif; font-style: italic; font-weight: 500; }
+      .eyebrow {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 13px; font-weight: 600;
+        letter-spacing: .22em; text-transform: uppercase;
+        color: var(--gold);
+        margin: 0 0 14px;
+        display: flex; align-items: center; gap: 12px;
+      }
+      .eyebrow::after { content: ""; height: 1px; background: var(--line); flex: 1; }
+      .eyebrow .no { color: var(--muted); letter-spacing: .1em; }
+
+      /* ---------- top bar ---------- */
+      .topbar {
+        position: sticky; top: 0; z-index: 40;
+        background: rgba(7,10,18,.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      .topbar-in { display: flex; align-items: center; gap: 18px; min-height: 58px; }
+      .wordmark {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700; font-size: 24px; letter-spacing: .04em;
+        color: var(--paper); text-decoration: none; white-space: nowrap;
+      }
+      .wordmark span { color: var(--gold); }
+      .topnav { display: flex; gap: 4px; margin-left: auto; }
+      .topnav a {
+        color: var(--muted); text-decoration: none;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 15px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+        padding: 10px 10px; min-height: 36px; display: inline-flex; align-items: center;
+      }
+      .topnav a:hover { color: var(--paper); }
+      .pill {
+        margin-left: 10px; white-space: nowrap;
+        display: inline-flex; align-items: center; gap: 8px;
+        background: var(--blue); color: #fff; text-decoration: none;
+        font-weight: 600; font-size: 14px;
+        padding: 9px 16px; border-radius: 999px; min-height: 38px;
+      }
+      .pill:hover { background: var(--blue-bright); }
+      .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex: none; }
+      @media (max-width: 760px) { .topnav { display: none; } .pill { margin-left: auto; } }
+      @media (max-width: 560px) {
+        .topbar-in { gap: 10px; flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+        .wordmark { font-size: 20px; }
+        .pill { font-size: 12.5px; padding: 8px 12px; min-height: 36px; }
+      }
+
+      /* ---------- hero ---------- */
+      .hero { padding: 56px 0 0; }
+      .hero .eyebrow::after { display: none; }
+      h1 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700; text-transform: uppercase;
+        font-size: clamp(46px, 8.4vw, 96px);
+        line-height: .98; letter-spacing: .005em;
+        margin: 0 0 6px;
+      }
+      h1 .gold { color: var(--gold); }
+      .hero .fromzero {
+        font-size: clamp(30px, 4.6vw, 52px);
+        color: var(--gold);
+        margin: 2px 0 20px; line-height: 1.1;
+      }
+      .proof { max-width: 640px; color: var(--muted); font-size: 18px; margin: 0 0 26px; }
+      .proof strong { color: var(--paper); font-weight: 600; }
+      .ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+      .btn {
+        display: inline-flex; align-items: center; gap: 8px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 18px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+        text-decoration: none; padding: 12px 24px; border-radius: 8px; min-height: 48px;
+      }
+      .btn-gold { background: var(--gold); color: #14100a; }
+      .btn-gold:hover { background: #ffd34f; }
+      .btn-line { border: 1px solid var(--line); color: var(--paper); }
+      .btn-line:hover { border-color: var(--gold); color: var(--gold); }
+      .hero-banner {
+        border: 1px solid var(--line); border-radius: var(--radius);
+        overflow: hidden; background: var(--blue);
+      }
+      .hero-banner img { width: 100%; height: auto; }
+      .hero-cap {
+        display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+        padding: 10px 2px 0; color: var(--muted); font-size: 14px;
+      }
+      .hero-cap b { color: var(--paper); font-weight: 600; }
+
+      /* ---------- ticker ---------- */
+      .ticker {
+        margin-top: 34px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+        overflow: hidden; padding: 10px 0;
+        -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+        mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+      }
+      .ticker-track {
+        display: flex; gap: 0; width: max-content;
+        animation: tick 30s linear infinite;
+      }
+      .ticker-track span {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 16px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+        color: var(--muted); padding-right: 14px; white-space: nowrap;
+      }
+      .ticker-track span i { color: var(--gold); font-style: normal; padding-right: 14px; }
+      @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      @media (prefers-reduced-motion: reduce) {
+        .ticker-track { animation: none; }
+        html { scroll-behavior: auto; }
+      }
+
+      /* ---------- sections ---------- */
+      section { padding: 64px 0 8px; }
+      h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700; text-transform: uppercase;
+        font-size: clamp(32px, 5vw, 52px); line-height: 1.02;
+        margin: 0 0 18px;
+      }
+      .lede { color: var(--muted); max-width: 680px; margin: 0 0 8px; }
+      .lede strong { color: var(--paper); }
+
+      /* ---------- metrics ---------- */
+      .metrics {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+        background: var(--line); border: 1px solid var(--line);
+        border-radius: var(--radius); overflow: hidden; margin-top: 26px;
+      }
+      .metric { background: var(--panel); padding: 24px 22px 20px; }
+      .metric .num {
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 700; font-size: clamp(44px, 5.4vw, 64px);
+        line-height: 1; color: var(--gold); letter-spacing: .01em;
+      }
+      .metric .what { font-weight: 600; margin-top: 10px; font-size: 16px; }
+      .metric .when { color: var(--muted); font-size: 13.5px; margin-top: 3px; }
+      .metrics-note { color: var(--muted); font-size: 13.5px; margin-top: 12px; }
+      @media (max-width: 760px) { .metrics { grid-template-columns: 1fr 1fr; } }
+
+      /* ---------- case study ---------- */
+      .case-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; margin-top: 24px; }
+      @media (max-width: 820px) { .case-grid { grid-template-columns: 1fr; gap: 18px; } }
+      .case-col h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 20px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+        color: var(--gold); margin: 0 0 8px;
+      }
+      .case-col p { margin: 0; color: var(--muted); }
+      .case-col p strong { color: var(--paper); }
+      .runofshow {
+        margin-top: 30px; background: var(--panel); border: 1px solid var(--line);
+        border-radius: var(--radius); padding: 22px 24px;
+      }
+      .runofshow h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 18px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+        margin: 0 0 16px; color: var(--paper);
+      }
+      .ros-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+      @media (max-width: 820px) { .ros-steps { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 480px) { .ros-steps { grid-template-columns: 1fr; } }
+      .ros-step .t {
+        font-family: "Barlow Condensed", sans-serif; font-weight: 700;
+        font-size: 17px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold);
+      }
+      .ros-step p { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
+      .gamenight {
+        margin-top: 18px; border: 1px solid var(--blue); border-radius: var(--radius);
+        background: linear-gradient(90deg, rgba(29,66,138,.35), rgba(29,66,138,.08));
+        padding: 18px 24px; display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline;
+      }
+      .gamenight .tag {
+        font-family: "Barlow Condensed", sans-serif; font-weight: 700;
+        letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-size: 16px;
+      }
+      .gamenight .line { font-weight: 600; }
+      .gamenight .sub { color: var(--muted); font-size: 15px; }
+
+      /* ---------- work ---------- */
+      .work-cols { columns: 2; column-gap: 22px; margin-top: 26px; }
+      @media (max-width: 760px) { .work-cols { columns: 1; } }
+      .card {
+        break-inside: avoid; margin: 0 0 22px;
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: var(--radius); overflow: hidden;
+      }
+      .card .media { background: #000; }
+      .card video { width: 100%; height: auto; }
+      .card .media img { width: 100%; height: auto; }
+      .card button.shot {
+        display: block; width: 100%; padding: 0; border: 0; background: #000; cursor: zoom-in;
+      }
+      .card figcaption { padding: 16px 18px 18px; }
+      .cap1 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 19px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+        margin: 0;
+      }
+      .cap1 .fmt { color: var(--gold); }
+      .cap1 .meta { color: var(--muted); font-weight: 600; font-size: 15px; letter-spacing: .12em; }
+      .cap2 { color: var(--muted); margin: 6px 0 0; font-size: 15.5px; }
+      .cap2 strong { color: var(--paper); font-weight: 600; }
+      .archive-link {
+        display: inline-flex; align-items: center; min-height: 40px;
+        font-family: "Barlow Condensed", sans-serif; font-size: 18px; font-weight: 700;
+        letter-spacing: .1em; text-transform: uppercase; text-decoration: none;
+      }
+      .archive-link:hover { text-decoration: underline; }
+
+      /* ---------- nickname chain ---------- */
+      .chain { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 26px; }
+      @media (max-width: 820px) { .chain { grid-template-columns: 1fr; } }
+      .step {
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: var(--radius); padding: 22px;
+      }
+      .step .stepno {
+        font-family: "Barlow Condensed", sans-serif; font-weight: 700;
+        font-size: 15px; letter-spacing: .18em; color: var(--muted); text-transform: uppercase;
+      }
+      .step h3 {
+        font-family: "Barlow Condensed", sans-serif; font-weight: 700;
+        font-size: 26px; text-transform: uppercase; line-height: 1.05; margin: 6px 0 10px;
+      }
+      .step p { margin: 0; color: var(--muted); font-size: 15.5px; }
+      .step p strong { color: var(--paper); }
+      .step blockquote {
+        margin: 12px 0 0; padding: 12px 14px;
+        background: var(--panel2); border-radius: 8px;
+        color: var(--paper); font-size: 16px;
+      }
+      .step blockquote .who { display: block; color: var(--muted); font-size: 13.5px; margin-top: 6px; }
+      .playbook {
+        margin-top: 24px; text-align: center;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(22px, 3.6vw, 34px); font-weight: 700;
+        letter-spacing: .1em; text-transform: uppercase;
+      }
+      .playbook .arr { color: var(--gold); padding: 0 6px; }
+
+      /* ---------- about ---------- */
+      .about p { max-width: 700px; color: var(--muted); font-size: 18px; }
+      .about p strong { color: var(--paper); }
+      .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; padding: 0; list-style: none; }
+      .tags li {
+        border: 1px solid var(--line); border-radius: 999px;
+        padding: 8px 16px; font-weight: 600; font-size: 15px; color: var(--paper);
+        background: var(--panel);
+      }
+
+      /* ---------- close ---------- */
+      .close {
+        margin-top: 72px; background: var(--blue);
+        border-radius: var(--radius); padding: 44px 34px 38px;
+      }
+      .close .eyebrow { color: var(--gold); }
+      .close .eyebrow::after { background: rgba(255,255,255,.25); }
+      .close h2 { color: #fff; margin-bottom: 12px; }
+      .close p { color: #d7def2; max-width: 620px; margin: 0 0 26px; font-size: 18px; }
+      .close p strong { color: #fff; }
+      .close .ctas { margin-bottom: 0; }
+      .btn-white { background: #fff; color: var(--blue); }
+      .btn-white:hover { background: var(--gold); color: #14100a; }
+      .btn-ghostw { border: 1px solid rgba(255,255,255,.55); color: #fff; }
+      .btn-ghostw:hover { border-color: #fff; color: #fff; }
+      footer { padding: 26px 0 44px; color: var(--muted); font-size: 14px; }
+      footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center; }
+      footer a { color: var(--muted); text-decoration: none; display: inline-flex; align-items: center; min-height: 36px; }
+      footer a:hover { color: var(--gold); }
+      footer .top { margin-left: auto; }
+
+      /* ---------- lightbox ---------- */
+      dialog#lightbox {
+        border: 1px solid var(--line); border-radius: var(--radius);
+        background: var(--panel); padding: 14px; max-width: min(1060px, 94vw);
+      }
+      dialog#lightbox::backdrop { background: rgba(3,5,10,.86); }
+      dialog#lightbox img { width: 100%; height: auto; border-radius: 8px; }
+      dialog#lightbox .lb-cap { color: var(--muted); font-size: 14.5px; padding: 10px 4px 2px; }
+      dialog#lightbox .lb-close {
+        display: inline-flex; align-items: center; min-height: 40px; margin-top: 8px;
+        background: var(--gold); color: #14100a; border: 0; border-radius: 8px;
+        font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 17px;
+        letter-spacing: .1em; text-transform: uppercase; padding: 8px 20px; cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-in">
+        <a class="wordmark" href="#top">@BASSEY<span>MUSE</span></a>
+        <nav class="topnav" aria-label="Sections">
+          <a href="#account">The Account</a>
+          <a href="#work">Work</a>
+          <a href="#name">The Name</a>
+          <a href="#about">About</a>
+        </nav>
+        <a class="pill" href="#contact"><span class="dot"></span>Available for social/video roles</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <div class="wrap hero">
+        <p class="eyebrow">Founder &amp; Creator — @BasseyMuse · Sports Social Media Producer · Video Editor</p>
+        <h1>I built Charles <span class="gold">“Basketball”</span> Bassey’s loudest corner of the internet.</h1>
+        <p class="fromzero serif-it">From zero.</p>
+        <p class="proof">I founded and run <strong>@BasseyMuse</strong> — an independent Charles Bassey account I grew from <strong>0 to 6,600+ followers in under 12 months</strong>. Strategy, video editing, graphics, publishing and community are all me, solo — including live, in-person game coverage.</p>
+        <div class="ctas">
+          <a class="btn btn-gold" href="#work">See the work ↓</a>
+          <a class="btn btn-line" href="https://x.com/BasseyMuse" target="_blank" rel="noopener">@BasseyMuse on X ↗</a>
+        </div>
+        <figure style="margin:0">
+          <div class="hero-banner">
+            <img src="assets/banner.jpg" alt="The @BasseyMuse X banner: Charles “Basketball” Bassey in a Warriors jersey on both sides of the words BASSEY MUSE, on Warriors blue" width="1500" height="500" />
+          </div>
+          <figcaption class="hero-cap"><span><b>The account’s live X banner</b> — designed by me.</span><span>The nickname is in the masthead.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track" id="tickerTrack">
+          <span>Game-night coverage <i>●</i> Short-form editing <i>●</i> Graphics &amp; compositing <i>●</i> Memes &amp; formats <i>●</i> Community <i>●</i> Live clipping <i>●</i> Account growth <i>●</i></span>
+        </div>
+      </div>
+
+      <!-- 01 METRICS -->
+      <section id="results" style="padding-top:44px">
+        <div class="wrap">
+          <p class="eyebrow"><span class="no">01</span> The Numbers</p>
+          <div class="metrics">
+            <div class="metric">
+              <div class="num">46K</div>
+              <div class="what">Views on the pinned career-story thread</div>
+              <div class="when">X · pinned thread · 474 likes</div>
+            </div>
+            <div class="metric">
+              <div class="num">5,800+</div>
+              <div class="what">Posts published, solo</div>
+              <div class="when">X · Dec 2024 – Nov 2026</div>
+            </div>
+            <div class="metric">
+              <div class="num">23K</div>
+              <div class="what">Views on the top post from one game night</div>
+              <div class="when">X · Nov 13, 2026 · 727 likes · covered in person</div>
+            </div>
+            <div class="metric">
+              <div class="num">6,600+</div>
+              <div class="what">Followers — built from 0</div>
+              <div class="when">X · launched Dec 2024 · reached inside 12 months</div>
+            </div>
+          </div>
+          <p class="metrics-note">All figures from @BasseyMuse on X — profile counters and post metrics as of November 14, 2026. Followers sit last on purpose: the output above is what built them.</p>
+        </div>
+      </section>
+
+      <!-- 02 THE ACCOUNT -->
+      <section id="account">
+        <div class="wrap">
+          <p class="eyebrow"><span class="no">02</span> The Account · Featured Case</p>
+          <h2>The assignment: give one player a home on the timeline</h2>
+          <div class="case-grid">
+            <div class="case-col">
+              <h3>The bet</h3>
+              <p>@BasseyMuse launched in <strong>December 2024</strong> around a single player: Charles Bassey — a rotation big with a real following and no account building around him nightly. One player, covered like a franchise.</p>
+            </div>
+            <div class="case-col">
+              <h3>What I built</h3>
+              <p>A daily, solo operation: <strong>pre-game graphics, live clips and posts during games, a final-stats post at the buzzer,</strong> then next-day edits, graphics and memes. Replies and community run every day, not just game days.</p>
+            </div>
+            <div class="case-col">
+              <h3>What happened</h3>
+              <p><strong>0 → 6,600+ followers in under 12 months</strong> and 5,800+ posts. The pinned career-story thread reached 46K views. On Nov 13, 2026 the account covered Spurs vs Warriors <strong>in person</strong> — and the beat writers at the game posted about it.</p>
+            </div>
+          </div>
+
+          <div class="runofshow">
+            <h3>Game night — the run of show</h3>
+            <div class="ros-steps">
+              <div class="ros-step"><div class="t">Before tip</div><p>Gameday graphic and matchup post set the tone.</p></div>
+              <div class="ros-step"><div class="t">Live</div><p>Clips and posts within minutes of the play — the timeline moves with the game.</p></div>
+              <div class="ros-step"><div class="t">Buzzer</div><p>Final-stats post the moment the game ends.</p></div>
+              <div class="ros-step"><div class="t">Next day</div><p>Edit, graphic or meme while the game is still the conversation.</p></div>
+            </div>
+          </div>
+
+          <div class="gamenight">
+            <span class="tag">Nov 13, 2026 · In person</span>
+            <span class="line">Spurs vs Warriors — Frost Bank Center</span>
+            <span class="sub">Bassey: 11 PTS · 5 REB · 2 AST in 20 min, 5/7 FG. My posts that night: 23K, 16K, 14K and 10K views.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 SELECTED WORK -->
+      <section id="work">
+        <div class="wrap">
+          <p class="eyebrow"><span class="no">03</span> Selected Work</p>
+          <h2>Four pieces. Every job on them was mine.</h2>
+          <p class="lede">Concept, edit, design, caption, publish — <strong>solo, start to finish</strong>. Two edits, two graphics; the full archive lives on the account itself.</p>
+
+          <div class="work-cols">
+            <figure class="card">
+              <div class="media">
+                <video controls preload="none" playsinline poster="assets/asset_2.jpg" aria-label="Celebration edit">
+                  <source src="assets/celebration-edit.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figcaption>
+                <p class="cap1"><span class="fmt">Video Edit</span> — The Celebration Edit <span class="meta">· X</span></p>
+                <p class="cap2">Concepted, cut and finished solo — the account’s signature hype edit.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card">
+              <div class="media">
+                <button class="shot" type="button" aria-label="View the Bassey Muse banner full size" data-full="assets/banner.jpg" data-cap="The Banner — the account’s live X banner: Charles “Basketball” Bassey cutouts on Warriors blue, BASSEY MUSE wordmark. Designed by @BasseyMuse.">
+                  <img src="assets/banner.jpg" alt="Bassey Muse X banner — Charles “Basketball” Bassey on both sides of the BASSEY MUSE wordmark, Warriors blue background" width="1500" height="500" loading="lazy" />
+                </button>
+              </div>
+              <figcaption>
+                <p class="cap1"><span class="fmt">Graphic</span> — The Banner <span class="meta">· Live on X now</span></p>
+                <p class="cap2">Designed the account’s visual identity: fresh player cutouts composited on Warriors blue. The nickname runs in the masthead of every profile view.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card">
+              <div class="media">
+                <video controls preload="none" playsinline poster="assets/asset_4.jpg" aria-label="Yaxel to Bassey — the assist tape, vertical edit">
+                  <source src="assets/yaxel-assists.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <figcaption>
+                <p class="cap1"><span class="fmt">Video Edit</span> — Yaxel → Bassey: The Assist Tape <span class="meta">· Vertical 9:16 · X</span></p>
+                <p class="cap2">Film-room compilation: every play checked by hand so <strong>each one is a verified true assist</strong>, duplicates removed, cut vertical for the feed.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="card">
+              <div class="media">
+                <button class="shot" type="button" aria-label="View the Never Gave Up meme full size" data-full="assets/asset_6.jpg" data-cap="Never Gave Up — meme (built Nov 13, 2026): “Why don’t you ever give up?” — “Because he never did,” beside a smiling Charles Bassey cutout. By @BasseyMuse.">
+                  <img src="assets/asset_6.jpg" alt="Never Gave Up meme — two cartoon figures trading “Why don’t you ever give up?” and “Because he never did,” beside a smiling Charles Bassey cutout" width="1500" height="540" />
+                </button>
+              </div>
+              <figcaption>
+                <p class="cap1"><span class="fmt">Meme</span> — Never Gave Up <span class="meta">· Nov 13, 2026</span></p>
+                <p class="cap2">The account’s voice in one image: the loyalty is the joke and the point. Built Nov 13 — game day — and filed to the account’s albums.</p>
+              </figcaption>
+            </figure>
+          </div>
+
+          <a class="archive-link" href="https://x.com/BasseyMuse" target="_blank" rel="noopener">Full archive — 5,800+ posts, live on @BasseyMuse ↗</a>
+        </div>
+      </section>
+
+      <!-- 04 THE NAME THAT STUCK -->
+      <section id="name">
+        <div class="wrap">
+          <p class="eyebrow"><span class="no">04</span> Brand Identity</p>
+          <h2>The name that stuck: Charles “Basketball” Bassey</h2>
+          <p class="lede">I coined the nickname, built the account’s identity around it, and repeated it on every post, graphic and reply — <strong>until fans used it unprompted and working media put it in their own posts</strong>. That’s not a bio line; it’s brand-building with receipts.</p>
+
+          <div class="chain">
+            <div class="step">
+              <div class="stepno">Step 1 · The name</div>
+              <h3>Built into the identity</h3>
+              <p>The account doesn’t just use the name — it’s organised around it. The bio reads:</p>
+              <blockquote>“Celebrating The Life Of CBB — Charles ‘Basketball’ Bassey”<span class="who">— @BasseyMuse bio, X</span></blockquote>
+              <p style="margin-top:12px">It’s in the banner masthead, the pinned thread, and the caption of every game post.</p>
+            </div>
+            <div class="step">
+              <div class="stepno">Step 2 · The fans</div>
+              <h3>Adopted by the community</h3>
+              <p>Repetition turned a coinage into the community’s default: <strong>“Basketball” shows up unprompted across replies and quote posts</strong> — fans arguing matchups, asking for minutes, and celebrating makes in the name the account gave him.</p>
+            </div>
+            <div class="step">
+              <div class="stepno">Step 3 · The press</div>
+              <h3>Used by working media</h3>
+              <p>On <strong>Nov 13, 2026</strong>, Bay Area News Group Warriors writer <strong>Joseph Dycus</strong> used Charles “Basketball” Bassey in his own post about the account’s owner at the game — a post that did <strong>22K views</strong>. The same night, Spurs writer <strong>Tom Petrini</strong> posted a selfie with the account’s owner, and Chronicle beat writer <strong>Luca Evans</strong> met him at halftime.</p>
+              <blockquote>“rarely get starstruck”<span class="who">— Tom Petrini, Spurs writer, posting his selfie from the game</span></blockquote>
+            </div>
+          </div>
+
+          <p class="playbook">Naming <span class="arr">→</span> Repetition <span class="arr">→</span> Adoption</p>
+        </div>
+      </section>
+
+      <!-- 05 ABOUT -->
+      <section id="about" class="about">
+        <div class="wrap">
+          <p class="eyebrow"><span class="no">05</span> About</p>
+          <h2>One operator. Every job.</h2>
+          <p>@BasseyMuse is a <strong>one-person operation</strong>. I plan the calendar, cut the video, design the graphics, post live through games, and run the replies after — every piece on the account is mine, start to finish. In under a year that turned into <strong>6,600+ followers, 5,800+ posts, a nickname the press now uses</strong>, and an in-person game night where the writers covering the team were posting about the account.</p>
+          <ul class="tags">
+            <li>Short-form video editing</li>
+            <li>Graphic design &amp; photo compositing</li>
+            <li>Real-time game coverage</li>
+            <li>Meme &amp; format content</li>
+            <li>Community management</li>
+            <li>Account growth</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 06 CONTACT -->
+      <div class="wrap">
+        <div class="close" id="contact">
+          <p class="eyebrow"><span class="no">06</span> Work With Me</p>
+          <h2>Let’s make the next story count.</h2>
+          <p>I’m available for <strong>full-time, contract and freelance social/video work</strong> — team and media social roles, and live game-night coverage. The fastest way to reach me is a DM on the account itself.</p>
+          <div class="ctas">
+            <a class="btn btn-white" href="https://x.com/BasseyMuse" target="_blank" rel="noopener">DM @BasseyMuse on X ↗</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>@BasseyMuse · Founder &amp; Creator</span>
+        <span>Figures as of November 14, 2026</span>
+        <a href="https://x.com/BasseyMuse" target="_blank" rel="noopener">X ↗</a>
+        <a class="top" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <dialog id="lightbox" aria-label="Graphic viewer">
+      <img id="lbImg" alt="" />
+      <p class="lb-cap" id="lbCap"></p>
+      <button class="lb-close" id="lbClose" type="button">Close</button>
+    </dialog>
+
+    <script>
+      // Duplicate the ticker content once so the CSS loop is seamless.
+      (function () {
+        var track = document.getElementById('tickerTrack');
+        track.innerHTML += track.innerHTML;
+      })();
+
+      // Lightbox for graphics.
+      (function () {
+        var dlg = document.getElementById('lightbox');
+        var img = document.getElementById('lbImg');
+        var cap = document.getElementById('lbCap');
+        var buttons = document.querySelectorAll('button.shot');
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].addEventListener('click', function () {
+            var thumb = this.querySelector('img');
+            img.src = this.getAttribute('data-full');
+            img.alt = thumb ? thumb.alt : '';
+            cap.textContent = this.getAttribute('data-cap') || '';
+            if (typeof dlg.showModal === 'function') { dlg.showModal(); }
+          });
+        }
+        document.getElementById('lbClose').addEventListener('click', function () { dlg.close(); });
+        dlg.addEventListener('click', function (e) { if (e.target === dlg) { dlg.close(); } });
+      })();
+    </script>
+  </body>
+</html>
